@@ -2,7 +2,6 @@ import {
   IComputedValue,
   IObservable,
   IObservableArray,
-  IObservableObject,
   IObservableValue,
   observable,
   ObservableMap,
@@ -28,7 +27,6 @@ type IGettable<T = any> =
   | IObservable
   | IComputedValue<T>
   | IObservableValue<T>
-  | IObservableObject
   | IObservableArray
   | ObservableMap
   | ObservableSet
@@ -216,7 +214,6 @@ function toPromise<T>(
     | IObservable
     | IComputedValue<Promise<T>>
     | IObservableValue<Promise<T>>
-    | IObservableObject
     | IObservableArray
     | ObservableMap
     | ObservableSet
